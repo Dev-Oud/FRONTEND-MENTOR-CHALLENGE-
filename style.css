@@ -1,23 +1,25 @@
 
-@font-face {
-    font-family: myFont;
-    src: url(./fonts/Roboto-Bold.ttf);
-
-}
  *{
     box-sizing: border-box;
  }
 body {
-    font-family: MyFont;
+   font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: hsl(235, 18%, 26%)
+    
+}
+p{
+   font-size: 16px;
+
 }
 .cards {
     display: flex;
-    width: 700px;
+    width: 800px;
     background-color: white;
     padding:  10px;  
     border-radius: 20px;
@@ -32,9 +34,11 @@ body {
 }
 .left img{
     width: 100%;
+    height: 100%;
 }
  ul{
     list-style-image: url(./assets/images/icon-success.svg);
+    font-size: small;
 
  }
  li{
@@ -46,13 +50,23 @@ body {
     flex-direction: column;
     width: 300px;
  }
+ form input {
+      margin-bottom: -5px;
+      transform: translate(50px);
+ }
+ form button {
+   margin-bottom: 10px;
+   justify-content: center;
+   transform: translate(50px);
+ }
  label{
     margin-bottom: 10px;
+    transform: translate(50px);
  }
  input{ 
     padding: 10px 20px;
     font-family:  inherit;
-    border-radius: 5px;
+    border-radius: 5px ;
     outline: none;
     border:  1px solid hsl(231, 7%, 60%);
 
@@ -61,7 +75,6 @@ body {
     font-family: inherit;
     margin-top: 20px;
     padding: 15px 20px;
-    border: none;
     outline: none;
     color: white;
     background-color: hsl(234, 29%, 20%);
@@ -95,12 +108,19 @@ body {
 .card button{
    width: 100%;
 }
-@media (max-width:768px){
+@media screen and  (max-width:768px){
    .cards {
       flex-direction: column-reverse;
-      width: 95%;
+      width: 300%;
       padding: 0;
 
+   }
+   form button, label, form input{
+      transform: translate(0);
+      position: relative;
+      left: 55%;
+      top: 30px;
+      transform: translate(-50%, -50%);
    }
    body {
       padding: 0;
@@ -128,5 +148,10 @@ body {
    }
 
 }
-
+ 
+.pageh{
+   font-weight: 700;
+   font-size: 40px;
+   text-transform: capitalize;
+}
 
